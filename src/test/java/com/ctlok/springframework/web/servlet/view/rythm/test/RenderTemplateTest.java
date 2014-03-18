@@ -23,7 +23,7 @@ public class RenderTemplateTest extends WebBaseTest {
 	}
 	
 	protected void templateRenderTest(String template) throws Exception{
-		Map<String, Object> model = new HashMap<String, Object>();
+		Map<String, Object> model = new HashMap<>();
 		model.put("result", "success");
 		
 		Assert.assertEquals("success", this.renderTemplate(template, model));

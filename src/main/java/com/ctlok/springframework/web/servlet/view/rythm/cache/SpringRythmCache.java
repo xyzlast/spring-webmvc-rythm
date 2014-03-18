@@ -44,6 +44,12 @@ public class SpringRythmCache implements ICacheService {
     }
 
     @Override
+    public void evict(String key) {
+        LOGGER.debug("Evict cache with key: [{}]", key);
+        this.cache.evict(key);
+    }
+
+    @Override
     public Serializable get(String key) {
         LOGGER.debug("Get cache with key: [{}]", key);
         final ValueWrapper valueWrapper = this.cache.get(key);

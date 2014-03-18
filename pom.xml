@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ctlok</groupId>
     <artifactId>spring-webmvc-rythm</artifactId>
-    <version>1.4.3-SNAPSHOT</version>
+    <version>1.4.4</version>
     <packaging>jar</packaging>
     <name>Rythm Template Engine for Spring</name>
     <description>This is a plugin for Spring to adapt Rythm template engine</description>
@@ -46,18 +46,25 @@
         </repository>
     </distributionManagement>
 
+    <repositories>
+        <repository>
+            <id>servlet</id>
+            <name>java-net</name>
+            <url>https://maven.java.net/content/repositories/releases</url>
+        </repository>
+    </repositories>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <java.version>1.6</java.version>
-
-        <dependency.servlet-api.version>2.5</dependency.servlet-api.version>
-        <dependency.spring.version>3.1.0.RELEASE</dependency.spring.version>
-        <dependency.rythm.version>1.0-b9</dependency.rythm.version>
+        <java.version>1.7</java.version>
+        <dependency.servlet-api.version>3.1.0</dependency.servlet-api.version>
+        <dependency.spring.version>4.0.1.RELEASE</dependency.spring.version>
+        <dependency.rythm.version>1.0</dependency.rythm.version>
         <dependency.slf4j-api.version>1.6.6</dependency.slf4j-api.version>
         <dependency.slf4j-impl.version>1.6.6</dependency.slf4j-impl.version>
         <dependency.commons-lang3.version>3.1</dependency.commons-lang3.version>
         <dependency.hibernate-validator.version>4.3.1.Final</dependency.hibernate-validator.version>
+        <dependency.spring.security.version>3.2.2.RELEASE</dependency.spring.security.version>
 
         <dependency.junit.version>4.10</dependency.junit.version>
         <dependency.logback.version>1.0.6</dependency.logback.version>
@@ -103,15 +110,13 @@
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>${dependency.servlet-api.version}</version>
-            <scope>provided</scope>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
-            <version>${dependency.spring.version}</version>
+            <version>${dependency.spring.security.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -204,14 +209,14 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>${dependency.spring.version}</version>
+            <version>${dependency.spring.security.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-            <version>${dependency.spring.version}</version>
+            <version>${dependency.spring.security.version}</version>
             <scope>test</scope>
         </dependency>
 

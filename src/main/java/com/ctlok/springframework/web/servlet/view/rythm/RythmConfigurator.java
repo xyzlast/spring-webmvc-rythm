@@ -163,6 +163,10 @@ public class RythmConfigurator extends WebApplicationObjectSupport {
         map.put("log.factory.impl", this.loggerFactory);
     }
 
+    /**
+     * Rythm configuration setting
+     * @param map
+     */
     protected void modeConfig(final Map<String, Object> map) {
         if (this.mode != null) {
             if (Rythm.Mode.prod.name().equalsIgnoreCase(this.mode)) {
